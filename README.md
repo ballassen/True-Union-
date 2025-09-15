@@ -156,3 +156,9 @@
 - [🧠 النظام الرمزي – symbolic-system.md](./symbolic-system.md)
 - [⚖️ الشروط والسياسات – terms-of-service.md](./terms-of-service.md)
 - [🔐 سياسة الخصوصية – privacy-policy.md](./privacy-policy.md)
+## 📚 ملفات مرجعية
+
+- [🧠 النظام الرمزي – symbolic-system.md](./symbolic-system.md)
+- [⚖️ الشروط والسياسات – terms-of-service.md](./terms-of-service.md)
+- [🔐 سياسة الخصوصية – privacy-policy.md](./privacy-policy.md)
+- [🤝 المساهمون الرمزيون – contributors.md](./contributors.md)
