@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Union</title>
     <script src="https://sdk.minepi.com/pi-sdk.js"></script>
 </head>
 <body>
     <h1>True Union App is Live</h1>
     <script>
-        Pi.init({ version: "2.0", sandbox: true });
+        // هذا الكود يجب أن يظهر بعد تحميل المكتبة أعلاه
+        window.onload = function() {
+            if (window.Pi) {
+                Pi.init({ version: "2.0", sandbox: true });
+                console.log("Pi SDK Initialized");
+            }
+        };
     </script>
 </body>
 </html>
-
