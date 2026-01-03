@@ -1,0 +1,10 @@
+{
+  "app_name": "True Union",
+  "short_name": "TrueUnion",
+  "description": "وصف قصير لتطبيقك هنا",
+  "developer_name": "اسمك أو اسم المطور",
+  "icon_url": "https://ballassen.github.io/True-Union-/icon.png",
+  "app_url": "https://ballassen.github.io/True-Union-/",
+  "privacy_policy_url": "https://ballassen.github.io/True-Union-/privacy",
+  "terms_of_service_url": "https://ballassen.github.io/True-Union-/terms"
+}
