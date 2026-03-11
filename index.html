@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="pi-archive-validation" content="B6f4cb2c579d1241212b6e59bcea05a0688493d005cb0848e03ec13bd8e694d236c0bcf3f38a31152320fe55010691ad5c6c1f884ff16fd4d1e7f53fa50526cf">
     <title>True Union</title>
     <script src="https://sdk.minepi.com/pi-sdk.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #121212; color: white; padding-top: 50px; }
+        .container { border: 1px solid #7c4dff; padding: 20px; border-radius: 15px; display: inline-block; }
+    </style>
 </head>
 <body>
-    <h1>True Union App is Live</h1>
+    <div class="container">
+        <h1>تطبيق True Union مباشر الآن 🚀</h1>
+        <p>مرحباً محمد، هذا هو مشروعك الثاني على الشبكة.</p>
+    </div>
+
     <script>
         window.onload = function() {
             if (window.Pi) {
                 Pi.init({ version: "2.0", sandbox: true });
+                console.log("Pi SDK Initialized for True Union");
             }
         };
     </script>
 </body>
 </html>
-
-
-
-
-
-
