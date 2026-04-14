@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="pi-archive-validation" content="b6f4cb2c579d1241212b6e59bcea05a0688493d005cb0848e03ec13bd8e694d236c0bcf3f38a31152320fe55010691ad5c6c1f884ff16fd4d1e7f53fa50526cf">
+    <meta name="pi-archive-validation" content="Byuhydc66xrbu4xhdgx7v05i4txkm0f3db5rovotckm88bx5fitrvgnvfjphwxzz">
     
     <title>True Union | Pi Network App</title>
     
@@ -60,39 +60,15 @@
             display: inline-block;
             margin-top: 15px;
         }
-
-        .footer-note {
-            margin-top: 25px;
-            font-size: 12px;
-            color: #666;
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>True Union 🚀</h1>
-        <p>مرحباً بك في مشروعك المباشر على الشبكة.</p>
-        <div class="badge">نظام Pi البيئي</div>
-        <p class="footer-note">جاري التحقق من ملكية الدومين عبر Pi SDK</p>
+        <p>تم تحديث كود التحقق بنجاح.</p>
+        <div class="badge">جاري الربط مع Pi Network</div>
     </div>
 
-    <script>
-        // تهيئة الـ SDK بمجرد تحميل الصفحة
-        window.onload = function() {
-            if (typeof Pi !== 'undefined') {
-                Pi.init({ version: "2.0", sandbox: false }); // تم تغيير sandbox إلى false للبيئة الحقيقية
-                console.log("True Union App: Pi SDK Initialized");
-                
-                // طلب تسجيل الدخول من المستخدم (اختياري)
-                const scopes = ['payments', 'username'];
-                function onIncompletePaymentFound(payment) { /* معالجة المدفوعات غير المكتملة */ }
-
-                Pi.authenticate(scopes, onIncompletePaymentFound).then(function(auth) {
-                    console.log("تم تسجيل الدخول بنجاح: " + auth.user.username);
-                }).catch(function(error) {
-                    console.error(error);
-                });
-            } else {
-                console
-        
+</body>
+</html>
