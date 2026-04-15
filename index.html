@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="pi-archive-validation" content="Yeq4zgd1jnb7d6czfwn6civxpa0mia3tedg9b3j9lr9jyy2swrid2m8fvurn1lvb">
     
-    <title>True Union | Pi Network App</title>
+    <meta name="pi-archive-validation" content="0ebda2af7f8c5e4eb1194c6a4154cb016f510b54ca93df2ac251619a9b93f797872bbf358b76bb0f3eabc1fab1c3614ce707514dedff79382796f3294ef1c91">
+    
+    <title>True Union | Pi Network</title>
     
     <script src="https://sdk.minepi.com/pi-sdk.js"></script>
 
@@ -16,9 +17,8 @@
             --bg-dark: #0a0a0a;
             --card-bg: #1e1e1e;
         }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: sans-serif;
             background-color: var(--bg-dark);
             color: #ffffff;
             margin: 0;
@@ -28,7 +28,6 @@
             height: 100vh;
             text-align: center;
         }
-
         .container {
             background-color: var(--card-bg);
             padding: 40px;
@@ -38,34 +37,14 @@
             max-width: 400px;
             width: 90%;
         }
-
-        h1 {
-            color: var(--pi-gold);
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            font-size: 18px;
-            color: #ccc;
-            line-height: 1.6;
-        }
-
+        h1 { color: var(--pi-gold); font-size: 28px; }
         .status-badge {
             background: var(--pi-purple);
             color: white;
             padding: 8px 20px;
             border-radius: 20px;
-            font-size: 14px;
-            display: inline-block;
             margin-top: 20px;
-            font-weight: bold;
-        }
-
-        .footer-text {
-            margin-top: 30px;
-            font-size: 12px;
-            color: #666;
+            display: inline-block;
         }
     </style>
 </head>
@@ -73,12 +52,14 @@
 
     <div class="container">
         <h1>True Union 🚀</h1>
-        <p>تم تحديث كود التحقق بنجاح وتفعيل الهوية البرمجية.</p>
-        <div class="status-badge">متصل بـ Pi Testnet</div>
-        <p class="footer-text">نظام موثق وآمن عبر شبكة Pi Network</p>
+        <p>تم تحديث كود التحقق الجديد للـ Testnet.</p>
+        <div class="status-badge">بانتظار التأكيد</div>
     </div>
 
     <script>
-        // تهيئة الـ SDK للتحقق من الاتصال
-        const Pi = window.
-            
+        const Pi = window.Pi;
+        if (Pi) { Pi.init({ version: "2.0", sandbox: true }); }
+    </script>
+
+</body>
+</html>
