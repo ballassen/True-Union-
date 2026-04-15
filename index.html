@@ -7,59 +7,20 @@
     <meta name="pi-archive-validation" content="0ebda2af7f8c5e4eb1194c6a4154cb016f510b54ca93df2ac251619a9b93f797872bbf358b76bb0f3eabc1fab1c3614ce707514dedff79382796f3294ef1c91">
     
     <title>True Union | Pi Network</title>
-    
     <script src="https://sdk.minepi.com/pi-sdk.js"></script>
 
     <style>
-        :root {
-            --pi-purple: #7c4dff;
-            --pi-gold: #ffa000;
-            --bg-dark: #0a0a0a;
-            --card-bg: #1e1e1e;
-        }
-        body {
-            font-family: sans-serif;
-            background-color: var(--bg-dark);
-            color: #ffffff;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .container {
-            background-color: var(--card-bg);
-            padding: 40px;
-            border-radius: 25px;
-            border: 2px solid var(--pi-purple);
-            box-shadow: 0 10px 30px rgba(124, 77, 255, 0.2);
-            max-width: 400px;
-            width: 90%;
-        }
-        h1 { color: var(--pi-gold); font-size: 28px; }
-        .status-badge {
-            background: var(--pi-purple);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            margin-top: 20px;
-            display: inline-block;
-        }
+        :root { --pi-purple: #7c4dff; --pi-gold: #ffa000; --bg-dark: #0a0a0a; }
+        body { font-family: sans-serif; background-color: var(--bg-dark); color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; }
+        .container { border: 2px solid var(--pi-purple); padding: 40px; border-radius: 25px; background: #1e1e1e; max-width: 400px; }
+        h1 { color: var(--pi-gold); }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1>True Union 🚀</h1>
-        <p>تم تحديث كود التحقق الجديد للـ Testnet.</p>
-        <div class="status-badge">بانتظار التأكيد</div>
+        <p>تم تحديث كود التحقق بنجاح.</p>
+        <div style="background: var(--pi-purple); padding: 10px; border-radius: 20px; font-weight: bold;">متصل بـ Pi Network</div>
     </div>
-
-    <script>
-        const Pi = window.Pi;
-        if (Pi) { Pi.init({ version: "2.0", sandbox: true }); }
-    </script>
-
 </body>
 </html>
