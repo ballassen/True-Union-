@@ -81,4 +81,94 @@
         <p class="subtitle">الاتحاد الحقيقي على شبكة Pi</p>
         
         <div class="user-info" id="userInfo">
-            <div>مرحباً <span id="username
+            <div>مرحباً <span id="username"></span></div>
+        </div>
+
+        <button class="btn btn-login" id="loginBtn" onclick="loginWithPi()">
+            تسجيل الدخول بـ Pi
+        </button>
+        
+        <button class="btn btn-pay" id="payBtn" onclick="payWithPi()" disabled>
+            ادفع 1 Pi للتجربة
+        </button>
+
+        <div class="status" id="status">جاهز للاتصال بـ Pi Network</div>
+    </div>
+
+    <script>
+        // 1. تهيئة SDK
+        const Pi = window.Pi;
+        Pi.init({ version: "2.0", sandbox: true }); // غيرها لـ false عند Mainnet
+
+        let currentUser = null;
+        const statusEl = document.getElementById('status');
+        const loginBtn = document.getElementById('loginBtn');
+        const payBtn = document.getElementById('payBtn');
+        const userInfo = document.getElementById('userInfo');
+        const usernameEl = document.getElementById('username');
+
+        // 2. تسجيل الدخول
+        async function loginWithPi() {
+            try {
+                statusEl.textContent = 'جاري تسجيل الدخول...';
+                loginBtn.disabled = true;
+                
+                const scopes = ['username', 'payments'];
+                const authResult = await Pi.authenticate(scopes, onIncompletePaymentFound);
+                
+                currentUser = authResult.user;
+                usernameEl.textContent = currentUser.username;
+                userInfo.style.display = 'block';
+                payBtn.disabled = false;
+                loginBtn.textContent = 'تم تسجيل الدخول ✅';
+                statusEl.textContent = 'تم الاتصال بنجاح';
+                
+            } catch (err) {
+                statusEl.textContent = 'فشل تسجيل الدخول: ' + err.message;
+                loginBtn.disabled = false;
+            }
+        }
+
+        // 3. الدفع التجريبي
+        async function payWithPi() {
+            try {
+                statusEl.textContent = 'جاري إنشاء عملية الدفع...';
+                payBtn.disabled = true;
+
+                await Pi.createPayment({
+                    amount: 1,
+                    memo: "True Union Test Payment",
+                    metadata: { test: true }
+                }, {
+                    onReadyForServerApproval: (paymentId) => {
+                        statusEl.textContent = 'بانتظار موافقة السيرفر... PaymentID: ' + paymentId;
+                        console.log('Approve this:', paymentId);
+                    },
+                    onReadyForServerCompletion: (paymentId, txid) => {
+                        statusEl.textContent = 'تم الدفع! TXID: ' + txid;
+                        console.log('Complete this:', paymentId, txid);
+                    },
+                    onCancel: (paymentId) => {
+                        statusEl.textContent = 'تم إلغاء الدفع';
+                        payBtn.disabled = false;
+                    },
+                    onError: (error, payment) => {
+                        statusEl.textContent = 'خطأ: ' + error.message;
+                        payBtn.disabled = false;
+                    }
+                });
+
+            } catch (err) {
+                statusEl.textContent = 'فشل الدفع: ' + err.message;
+                payBtn.disabled = false;
+            }
+        }
+
+        // 4. التعامل مع الدفعات غير المكتملة
+        function onIncompletePaymentFound(payment) {
+            console.log('Incomplete payment found:', payment);
+            statusEl.textContent = 'يوجد دفعة غير مكتملة: ' + payment.identifier;
+        }
+    </script>
+</body>
+</html>
