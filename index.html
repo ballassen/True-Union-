@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- مهم: لا تغير قيمة content إلا لو طلبت منك Pi -->
+    <!-- مهم: هذا الكود خاص بـ pi-archive. لا تغيره -->
     <meta name="pi-archive-validation" content="0ebda2af7f8c5e4eb1194c6a4154cb016f510b54ca93df2ac251619a9b93f797872bbf358b76bb0f3eabc1fab1c3614ce707514dedff79382796f3294ef1c91">
     
     <title>True Union | Pi Network</title>
@@ -53,20 +53,11 @@
             cursor: pointer;
             transition: 0.3s;
         }
-        .btn-login { 
-            background: var(--pi-purple); 
-            color: white; 
-        }
+        .btn-login { background: var(--pi-purple); color: white; }
         .btn-login:hover { background: #6a3de8; }
-        .btn-pay { 
-            background: var(--pi-gold); 
-            color: #000; 
-        }
+        .btn-pay { background: var(--pi-gold); color: #000; }
         .btn-pay:hover { background: #ff8f00; }
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
         .status {
             margin-top: 20px;
             padding: 10px;
@@ -90,25 +81,4 @@
         <p class="subtitle">الاتحاد الحقيقي على شبكة Pi</p>
         
         <div class="user-info" id="userInfo">
-            <div>مرحباً <span id="username"></span></div>
-        </div>
-
-        <button class="btn btn-login" id="loginBtn" onclick="loginWithPi()">
-            تسجيل الدخول بـ Pi
-        </button>
-        
-        <button class="btn btn-pay" id="payBtn" onclick="payWithPi()" disabled>
-            ادفع 1 Pi للتجربة
-        </button>
-
-        <div class="status" id="status">جاهز للاتصال بـ Pi Network</div>
-    </div>
-
-    <script>
-        // 1. تهيئة SDK عند تحميل الصفحة
-        const Pi = window.Pi;
-        Pi.init({ version: "2.0", sandbox: true }); // غيرها لـ false عند الإطلاق الرسمي
-
-        let currentUser = null;
-
-        // 2
+            <div>مرحباً <span id="username
