@@ -1,10 +1,12 @@
 {
   "app_name": "True Union",
   "short_name": "TrueUnion",
-  "description": "True Union is a decentralized community app on Pi Network.",
+  "description": "True Union — منصة الزواج الرمزي العالمية على شبكة Pi. توثيق الاتحاد بين شخصين باستخدام Pi و NFTs.",
   "developer_name": "ballassen",
-  "icon_url": "https://ballassen.github.io/True-Union-/icon.png",
-  "app_url": "https://trueunion1754.pinet.com",
-  "privacy_policy_url": "https://ballassen.github.io/True-Union-/",
-  "terms_of_service_url": "https://ballassen.github.io/True-Union-/"
+  "icon_url": "https://trueunion.pi/icon.png",
+  "app_url": "https://trueunion.pi",
+  "privacy_policy_url": "https://trueunion.pi/privacy-policy",
+  "terms_of_service_url": "https://trueunion.pi/terms-of-service",
+  "sdk_version": "2.0",
+  "supported_languages": ["ar", "en"]
 }
